@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jacuzzis - TecnoFibras CR</title>
-  <link rel="stylesheet" href="/assets/catalogo.css">
+  <link rel="stylesheet" href="./assets/catalogo.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -36,9 +36,10 @@
         </div>
     </div>
   </div>
-    <div class="auth-btn">
-        <button id="signInButton">Iniciar sesión</button>
-    </div>
+  <div class="auth-btn">
+    <a id="signInButton" href="./user-auth/public/sign-in.html" data-section="navbar" data-value="sign-in">Iniciar sesión</a>
+    <a id="logout" style="display: none;" data-section="navbar" data-value="log-out">Cerrar sesión</a>
+</div>
 </header>
         <main>
           <h1 class="titulo-principal">Catalogo de Bases</h1>
