@@ -1,0 +1,58 @@
+{
+    "navbar": {
+        "sign-in": "Sign In",
+        "log-out": "Log Out",
+        "home": "Home",
+        "catalog": "Catalog",
+        "about": "About Us",
+        "contact": "Contact Us"
+    },
+    "home": {
+        "title-1": "Welcome to",
+        "title-2": "TecnoFibras CR",
+        "description": "Your specialized store for Jacuzzis, Sinks, and Shower Bases."
+    },
+    "catalogo": {
+        "title": "Catalog",
+        "title-pilas": "Sinks",
+        "txt-pilas": "Check out our range of sinks.",
+        "title-bases": "Shower Bases",
+        "txt-bases": "Discover our high-quality shower bases.",
+        "txt-jacuzzis": "Explore our variety of jacuzzis."
+    },
+    "clients": {
+        "title": "Our Clients"
+    },
+    "about": {
+        "title": "About Us",
+        "txt": "Welcome to TecnoFibras, a family business passionately committed to manufacturing high-quality, elegant fiberglass products.<br><br>For over 20 years, we have dedicated ourselves to the art of crafting exceptional fiberglass creations that seamlessly merge form and function.<br><br>Our legacy is deeply rooted in a love for innovation and a relentless pursuit of excellence, ensuring every piece we create reflects the values of quality and craftsmanship we stand for."
+    },
+    "contact": {
+        "title": "Looking Forward to Hearing From You!",
+        "description": " If you’d like more information about our products, place an order, or have any questions, feel free to contact us.<br><br>📞 Phone: +506 2450 3645<br><br>📧 Email: info@tecnofibrastfcr.com<br><br>📍 Address: Naranjo, Autop. Bernardo Soto, Provincia de Alajuela, San Miguel, 20210<br>You can also reach out to us through our social media channels or by filling out the form on our website.<br>We’re here to help!",
+        "form-title": "Get in touch",
+        "name": "Name",
+        "subjet": "Subjet",
+        "message": "Message",
+        "submit": "Submit"
+    },
+    "sign-in": {
+        "title-1": "Welcome back",
+        "password": "Password",
+        "name": "Name",
+        "submit-1": "Log in",
+        "texto-1": "Don't have an account?",
+        "title-2": "Create account",
+        "texto-2": "Already have an account?",
+        "enlace-1": "Sign in",
+        "enlace-2": "Sign up"
+    },
+    "jacuzzi": {
+        "title": "Jacuzzi Catalog",
+        "cahuita-description": "Dimensions: 227cm x 200cm<br>Internal Depth: 87cm<br>External Depth: 88cm<br>Capacity: 260 Gal<br>Seats: 6",
+        "tamarindo-description": "Dimensions: 203cm x 155cm<br>Internal Depth: 46.5cm<br>External Depth: 47.5cm<br>Capacity: 86 Gal<br>Seats: 2"
+    },
+    "footer": {
+        "footer-txt": "&copy; 2024 TecnoFibras CR. All rights reserved."
+    }
+}

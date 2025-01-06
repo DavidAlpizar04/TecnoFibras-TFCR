@@ -1,0 +1,66 @@
+{
+    "navbar": {
+        "sign-in": "Iniciar sesión",
+        "log-out": "Cerrar sesión",
+        "home": "Inicio",
+        "catalog": "Catálogo",
+        "about": "Sobre Nosotros",
+        "contact": "Contáctanos"
+    },
+    "home": {
+        "title-1": "Bienvenido a",
+        "title-2": "TecnoFibras CR",
+        "description": "Tu tienda especializada en Jacuzzis, Pilas y Bases de Ducha."
+    },
+    "catalogo": {
+        "title": "Catálogo de Productos",
+        "title-pilas": "Pilas",
+        "txt-pilas": "Revisa nuestra gama de pilas.",
+        "title-bases": "Bases de Ducha",
+        "txt-bases": "Descubre nuestras bases de ducha de alta calidad.",
+        "txt-jacuzzis": "Explora nuestra variedad de jacuzzis."
+    },
+    "clients": {
+        "title": "Nuestros Clientes"
+    },
+    "about": {
+        "title": "Sobre Nosotros",
+        "txt": "Bienvenidos a TecnoFibras, una empresa familiar apasionadamente comprometida con la fabricación de productos de fibra de vidrio elegantes y de alta calidad.<br><br>Durante más de 20 años, nos hemos dedicado al arte de crear excepcionales piezas de fibra de vidrio que combinan perfectamente la forma y la funcionalidad.<br><br>Nuestra trayectoria está profundamente arraigada en un amor por la innovación y una búsqueda incansable de la excelencia, asegurando que cada pieza que creamos refleje los valores de calidad y artesanía que nos representan."
+    },
+    "contact": {
+        "title": "¡Esperamos con interés saber de ti!",
+        "description": "Si deseas obtener más información sobre nuestros productos, realizar un pedido o simplemente tienes alguna pregunta, no dudes en contactarnos.<br><br>📞 Teléfono: +506 2450 3645<br><br>📧 Correo electrónico: info@tecnofibrastfcr.com<br><br>📍Dirección: Naranjo, Autop. Bernardo Soto, Provincia de Alajuela, San Miguel, 20210<br><br>También puedes escribirnos a través de nuestras redes sociales o completar el formulario en nuestra página web.<br>¡Estamos aquí para ayudarte!",
+        "form-title": "Contáctanos",
+        "name": "Nombre",
+        "subjet": "Asunto",
+        "message": "Mensaje",
+        "submit": "Enviar"
+    },
+    "sign-in": {
+        "title-1": "Bienvenido de nuevo",
+        "password": "Contraseña",
+        "name": "Nombre",
+        "submit-1": "Ingresar",
+        "texto-1": "¿No tienes una cuenta?",
+        "title-2": "Crear cuenta",
+        "texto-2": "¿Ya tienes una cuenta?",
+        "enlace-1": "Iniciar sesión",
+        "enlace-2": "Regístrate"
+    },
+    "jacuzzi": {
+        "title": "Catalogo de Jacuzzis",
+        "cahuita-description": "Medidas: 227cm x 200cm<br>Profundidad interna : 87cm<br>Profundidad externa 88cm<br>Galonaje: 260 Gal<br>Capacidad: 6",
+        "tamarindo-description": "Medidas: 203cm x 155cm<br>Profundidad Interna: 46.5cm<br>Profundidad externa ;47.5cm<br>Galonaje: 86 Gal<br>Capacidad: 2"
+    },
+    "bases": {
+        "title": "Catalogo de Bases"
+    },
+    "pilas": {
+        "title": "Catalogo de Pilas",
+        "cahuita-description": "Medidas: 227cm x 200cm<br>Profundidad interna : 87cm<br>Profundidad externa 88cm<br>Galonaje: 260 Gal<br>Capacidad: 6",
+        "tamarindo-description": "Medidas: 203cm x 155cm<br>Profundidad Interna: 46.5cm<br>Profundidad externa ;47.5cm<br>Galonaje: 86 Gal<br>Capacidad: 2"
+    },
+    "footer": {
+        "footer-txt": "&copy; 2024 TecnoFibras CR. Todos los derechos reservados."
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="/user-auth/public/assets/formulario.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="/index.html#home">
+                <img class="logo" src="/assets/Imagenes/Logo tecnofibras.png" alt="TecnoFibras CR Logo">
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/index.html#home" data-section="navbar" data-value="home">Inicio</a></li>
+                <li><a href="/index.html#catalogo" data-section="navbar" data-value="catalog">Catálogo</a></li>
+                <li><a href="/index.html#about" data-section="navbar" data-value="about">Sobre Nosotros</a></li>
+                <li><a href="/index.html#Contact" data-section="navbar" data-value="contact">Contáctanos</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/tecnofibrastfcr" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="http://www.facebook.com/tecnofibrastfcr" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/tecnofibrastfcr" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/tecnofibrastfcr" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <div id="flags" class="flags">
+                <div class="flags__item" data-language="es">
+                    <img class="flags-img" src="/assets/Imagenes/Banderas/cr.svg" alt=""/>
+                </div>
+                <div class="flags__item" data-language="en">
+                    <img class="flags-img" src="/assets/Imagenes/Banderas/us.svg" alt=""/>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="formulario">
+            <div class="card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <p class="title" data-section="sign-in" data-value="title-1">Bienvenido de nuevo</p>
+                        <form class="login-form" id="loginForm">
+                            <input type="email" id="email" class="input" placeholder="Email" required autofocus>
+                            <input type="password" data-section="sign-in" data-value="password" id="password" class="input" placeholder="Password" required>
+                            <p class="page-link">
+                                <!-- <span class="page-link-label">Forgot Password?</span> -->
+                            </p>
+                            <input data-section="sign-in" data-value="submit-1" type="submit" class="form-btn" value="Ingresar"></input>
+                        </form>
+                        <h4 class="sign-up-label" data-section="sign-in" data-value="texto-1"> ¿No tienes una cuenta?
+                        </h4>
+                        <p class="sign-up-link" onclick="toggleSection()" data-section="sign-in" data-value="enlace-2">Regístrate</p>
+                    </div>
+                    <div class="card-back">
+                        <p class="title" data-section="sign-in" data-value="title-2">Crear cuenta</p>
+                        <form class="signup-form" id="signupForm">
+                            <input type="text" data-section="sign-in" data-value="name" id="name" class="input" placeholder="Name" required autofocus>
+                            <input type="email" id="email" class="input" placeholder="Email" required>
+                            <input type="password" data-section="sign-in" data-value="password" id="password" class="input" placeholder="Password" required>
+                            <input type="submit" class="form-btn" value="Registrar"></input>
+                        </form>
+                        <h4 class="sign-up-label" data-section="sign-in" data-value="texto-2"> 
+                            ¿Ya tienes una cuenta?</h4>
+                            <p class="sign-up-link" onclick="toggleSection2()"  data-section="sign-in" data-value="enlace-1">Iniciar sesión</p>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="/user-auth/public/assets/formulario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
