@@ -27,28 +27,28 @@ const productos = [
         type: "base",
         name: "Monteverde",
         description: "Largo:120cm<br>Ancho:120cmx70cmx70cm<br>Profundidad:13.5cm",
-        image: "/assets/Imagenes/Bases/Monteverde.jpg" 
+        image: "./assets/Imagenes/Bases/Monteverde.jpg" 
     },
     {
         id: 2,
         type: "base",
         name: "Diana",
         description: "Largo:125cm<br>Ancho:83cm<br>Profundidad:7cm",
-        image: "/assets/Imagenes/Bases/Diana.jpg"
+        image: "./assets/Imagenes/Bases/Diana.jpg"
     },
     {
         id: 3,
         type: "base",
         name: "Zarcero",
         description: "Largo:100cm<br>Ancho:90cm<br>Profundidad:14cm",
-        image: "/assets/Imagenes/Base de ducha logo.jpg"
+        image: "./assets/Imagenes/Base de ducha logo.jpg"
     },
     {
         id: 4,
         type: "base",
         name: "Miramar",
         description: "Largo:92cm<br>Ancho:76cm<br>Profundidad:14,5cm",
-        image: "/assets/Imagenes/Bases/Miramar.jpg" 
+        image: "./assets/Imagenes/Bases/Miramar.jpg" 
     },
 ];
 
