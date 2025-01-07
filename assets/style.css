@@ -343,8 +343,13 @@ section {
     position: relative;
     margin-top: 7.2rem;
     width: 100%;
+<<<<<<< HEAD
     height: 100vh;
     background-image: url('./assets/Imagenes/Fondo-ia.jpg'); 
+=======
+    height: 200vh;
+    background-image: url("./assets/Imagenes/Jacuzzi-logo.jpg"); 
+>>>>>>> ab275559da3d93074d2ed15f6d6d3fd7ce2634dd
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
