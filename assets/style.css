@@ -360,6 +360,7 @@ section {
     justify-content: flex-start; /* Espacia el contenido */
     overflow: hidden; /* Asegura que no sobresalgan elementos */
 }
+
 .home::before {
     content: "";
     position: absolute;
