@@ -344,7 +344,7 @@ section {
     margin-top: 7.2rem;
     width: 100%;
     height: 100vh;
-    background-image: url('./assets/Imagenes/Fondo con ia.jpg'); 
+    background-image: url("./assets/Imagenes/Jacuzzi-logo.jpg"); 
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
