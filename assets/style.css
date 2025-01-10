@@ -381,7 +381,6 @@ h1 {
     display: flex; 
     align-items: center;
     gap: 1rem; 
-    margin-left: 2rem;
     font-family: Tecnofibras;
     font-style: italic;
 }
@@ -391,8 +390,8 @@ h1 {
     margin: 0;
     line-height: 1.5;
     color: white;
-    margin-left: 3rem; 
-    margin-top: -10px;
+    margin-left: 1rem; 
+    margin-top: 1px;
     z-index: 2;
 }
 .ani-txt-1 {
@@ -402,7 +401,8 @@ h1 {
     color: var(--primary-color);
     overflow: hidden;
     white-space: nowrap;
-    padding-left: 1rem;
+    margin-left: -1rem;
+    margin-top: -1.5rem;
     font-family: Tecnofibras;
     font-style: italic;
 }
@@ -466,7 +466,7 @@ h1 {
     .ani-txt-1{
         font-weight: bold;
         margin-top: -55px ;
-        margin-left: -230px;
+        margin-left: -210px;
     }
     .home {
         margin-top: 6.8rem;
@@ -833,7 +833,7 @@ h1 {
 
 /* Contacto */
 .Contact {
-    height: auto;
+    height: 175vh;
     color: var(--accent-color);
     --y-0: 90%;
     --x-0: 91%;
@@ -981,6 +981,7 @@ h1 {
 .textarea {
     padding: 0.6rem;
     width: 70%;
+    min-width: 300px;
     min-height: 205px;
     max-height: 300px;
     max-width: 80%;
@@ -1050,6 +1051,9 @@ textarea::placeholder{
 
 /* Responsive Contacto */
 @media (max-width: 768px) {
+    .Contact {
+        height: auto;
+    }
     .Contact .txt-contact h2 {
         font-size: 1.5rem;
     }
@@ -1088,6 +1092,7 @@ textarea::placeholder{
     } 
     .textarea {
         min-height: 50px;
+        min-width: 100px;
         margin: 0;
         font-size: 0.8rem;
     }
@@ -1107,7 +1112,6 @@ footer {
     padding: 20px;
     background-color: var(--secondary-color);
     color: var(--accent-color);
-
 }
 @media (max-width: 768px) {
     .navbar ul {
