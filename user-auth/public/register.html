@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="assets/formulario.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#home">
+                <img class="logo" src="assets/Imagenes/Logo_placeholder.png" alt="TecnoFibras CR Logo">
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/index.html#home" data-section="navbar" data-value="home">Inicio</a></li>
+                <li><a href="/index.html#catalogo" data-section="navbar" data-value="catalog">Catálogo</a></li>
+                <li><a href="/index.html#about" data-section="navbar" data-value="about">Sobre Nosotros</a></li>
+                <li><a href="/index.html#Contact" data-section="navbar" data-value="contact">Contáctanos</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/tecnofibrastfcr" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="http://www.facebook.com/tecnofibrastfcr" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/tecnofibrastfcr" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/company/tecnofibrastfcr/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div id="flags" class="flags">
+            <div class="flags__item" data-language="es">
+                <img class="flags-img" src="assets/Imagenes/cr-placeholder.txt" alt="bandera"/>
+            </div>
+            <div class="flags__item" data-language="en">
+                <img class="flags-img" src="assets/Imagenes/us-placeholder.txt" alt="bandera"/>
+            </div>
+        </div>
+    </header>
+    <section class="formulario">
+    <div class="card-inner">
+        <div class="card-back">
+            <form id="signupForm">
+                <h2>Register</h2>
+                <input type="text" id="name" placeholder="Name" required autocomplete="name">
+                <input type="email" id="signupEmail" placeholder="Email" required autocomplete="email">
+                <input type="password" id="signupPassword" placeholder="Password" required autocomplete="new-password">
+                <input type="hidden" name="csrf_token" value="YOUR_GENERATED_CSRF_TOKEN"> <!-- CSRF Token -->
+                <button type="submit">Register</button>
+            </form>
+            <h4>Already have an account?<a href="./login.html" class="sign-up-link"> Sign In</a></h4>
+        </div>
+    </div>
+</section>
+    <script src="assets/formulario.js"></script>
+</body>
+</html>

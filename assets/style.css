@@ -272,7 +272,7 @@ section {
         flex-direction: column;
         padding: 1rem 0;
         width: auto;
-        height: auto;
+        height: 13vh;
 }
     header .logo {
         position: absolute;
@@ -1160,15 +1160,18 @@ textarea::placeholder{
     background-color: #212121;
     color: #b8b3b3;
     padding: 1rem 0.5rem;
-    font-family: var(--font-family);
-    width: 100%; /* Asegura que el footer tenga un ancho completo */
+    font-family: Tecnofibras;
+    width: 100%; 
     box-sizing: border-box;
+    text-align: center;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
-    gap: 1rem; /* Espacio entre secciones */
+    justify-content: space-between; /* Espacio uniforme entre secciones */
+    align-items: flex-start; /* Alinear al inicio */
+    gap: 0.5rem; /* Espacio entre secciones */
+    flex-wrap: wrap; /* Permite que las secciones se ajusten en caso de espacio limitado */
     width: 100%;
     margin-bottom: 0.5rem;
     box-sizing: border-box;
@@ -1176,18 +1179,22 @@ textarea::placeholder{
 
 /* Sección individual */
 .footer-section {
-    flex: 1 1 22%; /* Establece el ancho de las secciones */
-    min-width: 120px; /* Ancho mínimo */
+    text-align: center;
+    flex: 1 1 calc(25% - 1rem); /* Cada sección ocupa el 25% del ancho menos el espacio */
+    min-width: 120px; /* Ancho mínimo para evitar colapso en resoluciones pequeñas */
     box-sizing: border-box;
+    text-align: left;
 }
 
 .footer-section h3 {
+    text-align: center;
     font-size: 1rem;
     color: #fff;
     margin-bottom: 0.3rem;
 }
 
 .footer-section ul {
+    text-align: center;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -1220,13 +1227,8 @@ textarea::placeholder{
 
 /* Ajustes responsivos */
 @media (max-width: 768px) {
-    .footer-container {
-        gap: 0.5rem; /* Reducir espacio entre secciones */
-    }
-
     .footer-section {
-        flex: 1 1 45%; /* Dos secciones por fila */
-        min-width: 140px;
+        flex: 1 1 calc(25% - 0.5rem);
     }
 
     .footer-section h3 {
@@ -1240,26 +1242,28 @@ textarea::placeholder{
 
 @media (max-width: 576px) {
     .footer-container {
-        flex-direction: column; /* Cambiar a dirección vertical */
-        gap: 1rem; /* Espacio entre secciones */
+        gap: 0.2rem; 
     }
 
     .footer-section {
-        flex: 1 1 100%; /* Cada sección ocupa el 100% del ancho */
-        min-width: 50%; /* Asegura que no se desborden */
-        margin-bottom: 1rem; /* Espacio entre las secciones */
+        flex: 1 1 calc(25% - 0.5rem);
+        min-width: 80px; 
     }
 
     .footer-section h3 {
-        font-size: 0.8rem; /* Título más pequeño */
+        font-size: 0.7rem; 
     }
-
-    .footer-section ul li {
-        font-size: 0.7rem; /* Texto reducido */
+    .footer-section {
+        margin-left: -0.6rem;
     }
-
+    .footer-section ul li{
+        font-size: 0.5rem; 
+    }
+    .footer-section ul li a {
+        font-size: 0.5rem;
+    }
     .footer-bottom {
-        font-size: 0.6rem; /* Texto del copyright reducido */
+        font-size: 0.6rem; 
     }
 }
 /* Fondo degradado 1*/

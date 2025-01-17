@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="auth-btn">
-            <a id="signInButton" href="./user-auth/public/sign-in.html" data-section="navbar" data-value="sign-in">Iniciar sesión</a>
+            <a id="signInButton" href="./user-auth/public/register.html" data-section="navbar" data-value="sign-in">Iniciar sesión</a>
             <a id="logout" style="display: none;" data-section="navbar" data-value="log-out">Cerrar sesión</a>
         </div>
     </header>
@@ -148,6 +148,23 @@
             </div>
         </form>
     </div>
+    </section>
+
+    <section class="blog" id="blog">
+        <div class="ctn-lbl-comentar">
+            <label for="" class="lbl-comentar">Lista de comentarios</label>
+        </div>
+        <div id="commentSection">
+            <form id="commentForm" style="display: none;">
+                <input type="text" id="userName" placeholder="Your Name" required />
+                <textarea id="userComment" placeholder="Your Comment" required></textarea>
+                <button type="submit">Submit Comment</button>
+            </form>
+            <p id="loginPrompt" style="display: none;">You must be signed in to comment. <a href="./user-auth/public/register.html">Log in</a></p>
+        </div>
+        <div id="commentsContainer">
+            <!-- Comments will be dynamically loaded here -->
+        </div>
     </section>
 
     <footer class="footer">

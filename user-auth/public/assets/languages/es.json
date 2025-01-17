@@ -1,0 +1,22 @@
+{
+    "navbar": {
+        "home": "Inicio",
+        "catalog": "Catálogo",
+        "about": "Sobre Nosotros",
+        "contact": "Contáctanos"
+    },
+    "sign-in": {
+        "title-1": "Bienvenido de nuevo",
+        "password": "Contraseña",
+        "submit-1": "Ingresar",
+        "texto-1": "¿No tienes una cuenta?",
+        "enlace-2": "Regístrate"
+    },
+    "sign-up": {
+        "title-2": "Crear cuenta",
+        "name": "Nombre",
+        "submit": "Registrar",
+        "texto-2": "¿Ya tienes una cuenta?",
+        "enlace-1": "Iniciar sesión"
+    }
+}

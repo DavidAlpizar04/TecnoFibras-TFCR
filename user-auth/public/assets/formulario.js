@@ -1,100 +1,103 @@
-//Funcion turnAround
-function toggleSection() {
-    const section = document.querySelector('.card-inner');
-    section.classList.toggle('turnAround'); // Agrega o quita la clase 'turnAround'
-}
-
-document.querySelectorAll('.sign-up-link').forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
-        toggleSection();
-    });
-});
-function toggleSection2() {
-    const section = document.querySelector('.card-inner');
-    section.classList.toggle('turnAround'); // Agrega o quita la clase 'turnAround'
-}
-
-document.querySelectorAll('.sign-up-link').forEach(link => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
-        toggleSection2();
-    });
-});
-
-//Formulario
+// Sign-Up Form Handling
 const signupForm = document.querySelector('#signupForm');
-signupForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.querySelector('#name').value;
-    const email = document.querySelector('#email').value;
-    const password = document.querySelector('#password').value;
+if (signupForm) {
+    signupForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name = document.querySelector('#name').value;
+        const email = document.querySelector('#signupEmail').value;
+        const password = document.querySelector('#signupPassword').value;
+        const csrfToken = document.querySelector('input[name="csrf_token"]').value; // Get CSRF token
 
-    const Users = JSON.parse(localStorage.getItem('users')) || [];
-    const isUserRegistered = Users.find(user => user.email === email);
-    if (isUserRegistered) {
-        Swal.fire({
-            icon: "error",
-            title: 'El email ya se encuentra registrado!', });
-    }
-Users.push({ name: name, email: email, password: password })
-localStorage.setItem('users', JSON.stringify(Users))
-Swal.fire({
-    icon: "success",
-    title: 'Usuario registrado con éxito!', });
-});
+        // Frontend validation
+        if (!name || !email || !password) {
+            Swal.fire({
+                icon: "error",
+                title: 'Please fill in all fields!',
+            });
+            return;
+        }
 
-const loginForm = document.querySelector('#loginForm');
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = document.querySelector('#email').value;
-    const password = document.querySelector('#password').value;
-    const Users = JSON.parse(localStorage.getItem('users')) || [];
-    const validUser = Users.find(user => user.email === email && user.password === password);
-    const Toast = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-            toast.onmouseenter = Swal.stopTimer;
-            toast.onmouseleave = Swal.resumeTimer;
+        // Input sanitization (basic example)
+        const sanitizedEmail = email.trim();
+        const sanitizedName = name.trim();
+        const sanitizedPassword = password.trim();
+
+        try {
+            const response = await fetch('http://localhost:3001/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-Token': csrfToken // Include CSRF token in the request
+                },
+                body: JSON.stringify({ name: sanitizedName, email: sanitizedEmail, password: sanitizedPassword }),
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                Swal.fire({
+                    icon: "success",
+                    title: data.message,
+                });
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: data.message,
+                });
+            }
+        } catch (error) {
+            Swal.fire({
+                icon: "error",
+                title: 'Error registering user!',
+            });
         }
     });
-    if (!validUser) {
-        Toast.fire({
-            icon: "error",
-            title: "Usuario o contraseña incorrectos!",  
-        });
-    } else {
-        Toast.fire({
-            icon: "success",
-            title: 'Bienvenido ' + validUser.name + '!',  
-        });
-        localStorage.setItem('login_success', JSON.stringify(validUser));
-        window.location.href = '/index.html';
-    }
-});
+}
 
-//idioma
+// Login Form Handling
+const loginForm = document.querySelector('#loginForm');
+if (loginForm) {
+    loginForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.querySelector('#email').value;
+        const password = document.querySelector('#password').value;
 
-const flagsElement = document.getElementById("flags");
+        // Frontend validation
+        if (!email || !password) {
+            Swal.fire({
+                icon: "error",
+                title: 'Please fill in all fields!',
+            });
+            return;
+        }
 
-const changeLanguage = async language=> {
-    const requestJson = await fetch(`/assets/languages/${language}.json`);
-    const texts = await requestJson.json();
+        try {
+            const response = await fetch('http://localhost:3001/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
 
-    const textsToChange = document.querySelectorAll("[data-section]");
-
-    for(const textToChange of textsToChange) {
-        const section = textToChange.dataset.section;
-        const value = textToChange.dataset.value;
-
-        textToChange.innerHTML = texts[section][value];
-    }
-};
-
-flagsElement.addEventListener('click', (e) => {
-    changeLanguage(e.target.parentElement.dataset.language);
-});
+            const data = await response.json();
+            if (response.ok) {
+                Swal.fire({
+                    icon: "success",
+                    title: 'Login successful!',
+                }).then(() => {
+                    window.location.href = '/index.html'; // Redirect to index.html
+                });
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: data.message,
+                });
+            }
+        } catch (error) {
+            Swal.fire({
+                icon: "error",
+                title: 'Error logging in!',
+            });
+        }
+    });
+}
