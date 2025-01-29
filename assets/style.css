@@ -670,7 +670,7 @@ h1 {
 /* Clientes */
 .hidden-section {
     overflow: hidden;
-    height: 0.5vh;
+    height: 0.9vh;
     background-color: var(--blue-color);
     transition: height 0.5s ease, padding 0.5s ease;
     padding: 10px 20px;
@@ -744,6 +744,11 @@ h1 {
     .hidden-section.expanded {
         height: 50vh;
         padding: 20px;
+    }
+    .hidden-section {
+        overflow: hidden;
+        height: 1vh;
+
     }
 }
 
@@ -839,7 +844,7 @@ h1 {
 
 /* Contacto */
 .Contact {
-    height: 175vh;
+    height: auto;
     color: var(--accent-color);
     --y-0: 90%;
     --x-0: 91%;
@@ -948,6 +953,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
 }
 .form {
     width: 100%;
@@ -959,7 +965,7 @@ h1 {
     transition: all 1s ease;
     margin-top: 5rem;
     max-height: 300px;
-    margin-bottom: 1rem;
+    margin-bottom: 6rem;
 }
 .form .form_front {
     display: flex;
@@ -1154,6 +1160,119 @@ textarea::placeholder{
     }
 }
 
+/* Comentarios */
+.comentarios h2 {
+    font-size: 4rem;
+    font-family: var(--font-family-titles);
+    font-style: italic;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.comentarios h3 {
+    font-size: 2rem;
+    font-family: var(--font-family-titles);
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+.comentarios {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #050753;
+    color: var(--accent-color);
+    padding: 2rem;
+}
+.comentarios p{
+    font-family: 'Tecnofibras';
+}
+.comentarios textarea {
+    padding: 0.6rem;
+    width: 70%;
+    min-width: 300px;
+    min-height: 28px;
+    max-height: 300px;
+    max-width: 80%;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #bdbdbd;
+    text-align: start;
+    outline: none;
+    padding: 0px 7px;
+    background-color: rgb(21, 21, 22);
+    border-radius: 6px;
+    border: 2px solid #212121;
+    box-shadow: 6px 6px 10px rgba(0,0,0,1),
+    1px 1px 10px rgba(255, 255, 255, 0.6);
+    transition: 0.35s;
+}
+.comentarios textarea:focus {
+    padding: 0.6rem;
+    transform: scale(1.05);
+    box-shadow: 6px 6px 10px rgba(0,0,0,1),
+    1px 1px 10px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 10px rgba(0,0,0,1),
+    inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+}
+.comentarios textarea:focus::placeholder{
+color: rgb(21, 21, 22);
+transition: 0.3s;
+opacity: 0;
+}
+.comentarios textarea::placeholder{
+    color: #bdbdbd;
+    padding: 0.6rem;
+    padding-top: 1rem;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.comentarios button {
+    padding: 10px 35px;
+    cursor: pointer;
+    margin-top: 1rem;
+    background-color: rgb(21, 21, 22);
+    border-radius: 6px;
+    border: 2px solid rgb(21, 21, 22);
+    box-shadow: 6px 6px 10px rgba(0,0,0,1),
+    1px 1px 10px rgba(255, 255, 255, 0.6);
+    color: #b8b3b3;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.35s;
+    text-decoration: none;
+    text-align: center;
+}
+.comentarios button:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 10px rgba(0,0,0,1),
+    1px 1px 10px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 10px rgba(0,0,0,1),
+    inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+}
+.comentarios button:focus {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 10px rgba(0,0,0,1),
+    1px 1px 10px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 10px rgba(0,0,0,1),
+    inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+}
+.comentario {
+    margin: 1rem 0;
+    padding: 1.6rem;
+    border-radius: 15px;
+    box-shadow: inset 2px 2px 10px rgba(0,0,0,1),
+    inset -1px -1px 5px rgba(255, 255, 255, 0.6);
+    background-color: rgb(21, 21, 22);
+}
+    
 /* Footer */
 /* Estilos generales del footer */
 .footer {
